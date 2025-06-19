@@ -9,15 +9,19 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FFF8F7] text-[#1E1B1B] shadow-md p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-[#725855]">
-          🛒 MyStore
+        <Link
+          to="/"
+          className="flex items-center space-x-2 text-xl font-bold text-[#725855]"
+        >
+          <img
+            src="https://i.postimg.cc/L6zPKfTL/download.png"
+            alt="App Icon"
+            className="w-8 h-8 object-contain"
+          />
+          <span>Ruby Store</span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="hover:text-[#5C4541]">
-            Home
-          </Link>
           <Link to="/products" className="hover:text-[#5C4541]">
             Products
           </Link>
@@ -29,7 +33,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden focus:outline-none text-[#1E1B1B]"
           onClick={toggleMenu}
@@ -60,16 +63,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden px-4 pt-2 pb-4 bg-[#FFF8F7] shadow">
-          <Link
-            to="/"
-            className="block py-2 hover:text-[#5C4541]"
-            onClick={toggleMenu}
-          >
-            Home
-          </Link>
           <Link
             to="/products"
             className="block py-2 hover:text-[#5C4541]"

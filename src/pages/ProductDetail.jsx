@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import useCart from "../hooks/useCart";
 import useCart from "../context/CartContext";
 
 const ProductDetail = () => {
@@ -21,25 +20,36 @@ const ProductDetail = () => {
     }
   }, [id]);
 
-  if (!product) return <p className="text-center text-lg">Loading...</p>;
+  if (!product)
+    return (
+      <p className="text-center text-lg text-[#725855] mt-10">Loading...</p>
+    );
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow max-w-3xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-6">
+    <div className="max-w-4xl mx-auto p-8 bg-[#F9F2F1] rounded-xl shadow-lg mt-8">
+      <div className="flex flex-col md:flex-row gap-8">
         <img
           src={product.image}
           alt={product.title}
-          className="w-full md:w-1/2 h-64 object-contain"
+          className="w-full md:w-1/2 h-80 object-contain rounded-lg bg-white p-4 shadow"
         />
-        <div>
-          <h1 className="text-xl font-bold mb-2">{product.title}</h1>
-          <p className="text-gray-700 mb-4">{product.description}</p>
-          <p className="text-blue-600 font-bold text-lg mb-4">
-            ${product.price}
-          </p>
 
-          <div className="flex items-center gap-2 mb-4">
-            <label htmlFor="qty" className="text-sm font-medium">
+        <div className="flex flex-col justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-4 text-[#725855]">
+              {product.title}
+            </h1>
+            <p className="text-[#503A37] mb-6">{product.description}</p>
+            <p className="text-[#725855] font-bold text-2xl mb-6">
+              ${product.price.toFixed(2)}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4 mb-6">
+            <label
+              htmlFor="qty"
+              className="text-[#725855] font-semibold text-lg min-w-[40px]"
+            >
               Qty:
             </label>
             <input
@@ -48,7 +58,7 @@ const ProductDetail = () => {
               min="1"
               value={quantity}
               onChange={(e) => setQuantity(Number(e.target.value))}
-              className="w-16 p-1 border rounded"
+              className="w-20 p-2 border border-[#503A37] rounded text-[#503A37]"
             />
           </div>
 
@@ -58,8 +68,10 @@ const ProductDetail = () => {
               addToCart(product, quantity);
               alert(`${product.title} (x${quantity}) added to cart ✅`);
             }}
-            className={`px-4 py-2 rounded text-white ${
-              quantity < 1 ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
+            className={`w-full py-3 rounded-full font-semibold text-[#F6EFEE] transition ${
+              quantity < 1
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[#725855] hover:bg-[#5a453f]"
             }`}
           >
             Add to Cart

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
         <div>
           <h2 className="text-base font-semibold text-[#725855] mb-3">
-            ShopWise
+            Ruby store
           </h2>
           <p>
             Your go-to store for quality products, unbeatable prices, and smooth
@@ -101,7 +101,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-[#4F4443] mt-10 border-t border-[#D3C3C1] pt-4">
-        &copy; {currentYear} ShopWise. All rights reserved.
+        &copy; {currentYear} Ruby Store. All rights reserved.
       </div>
     </footer>
   );
