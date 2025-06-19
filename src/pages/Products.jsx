@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+// import useCart from "../hooks/useCart";
+import useCart from "../context/CartContext";
 import useProducts from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
-import useCart from "../hooks/useCart"; // Optional if you want to show item count
 
 const Home = () => {
   const { products, loading } = useProducts();
-  const { cart } = useCart(); // Optional
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0); // Optional
+  const { cart } = useCart();
+
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   if (loading)
     return <p className="text-center text-lg">Loading products...</p>;
@@ -23,7 +25,7 @@ const Home = () => {
       {/* 🛒 Floating Cart Button */}
       <Link
         to="/cart"
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg transition duration-300"
+        className="fixed bottom-4 right-4 z-50 bg-primary-light dark:bg-primary-dark text-white px-5 py-3 rounded-full shadow-lg transition duration-300"
       >
         🛒 Cart ({totalItems})
       </Link>

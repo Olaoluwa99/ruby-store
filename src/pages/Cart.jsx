@@ -1,4 +1,5 @@
-import useCart from "../hooks/useCart";
+// import useCart from "../hooks/useCart";
+import useCart from "../context/CartContext";
 import { Link } from "react-router-dom";
 import useScreenshot from "../hooks/useScreenshot";
 import useVoiceCommand from "../hooks/useVoiceCommand";

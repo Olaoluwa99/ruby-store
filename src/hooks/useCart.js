@@ -1,4 +1,3 @@
-// src/hooks/useCart.js
 import { useState, useEffect } from "react";
 
 const getCartFromStorage = () => {

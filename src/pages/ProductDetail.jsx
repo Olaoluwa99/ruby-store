@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import useCart from "../hooks/useCart";
+// import useCart from "../hooks/useCart";
+import useCart from "../context/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
