@@ -3,30 +3,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* index.css html {
-  @apply bg-white text-black transition-colors duration-300;
-}
-
-html.dark {
-  @apply bg-[#151312] text-[#E8E1E0];
-} */
-
-/* html {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-html.dark {
-  background-color: #151312;
-  color: #e8e1e0;
-} */
-
-/* html {
-  @apply bg-backgroundLight text-onBackgroundLight transition-colors duration-300;
-}
-
-html.dark {
-  @apply bg-backgroundDark text-onBackgroundDark;
-} */

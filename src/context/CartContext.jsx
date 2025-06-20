@@ -1,4 +1,3 @@
-// src/context/CartContext.js
 import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
@@ -53,7 +52,7 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Default export with safety check
+//
 export default function useCart() {
   const context = useContext(CartContext);
   if (!context) {

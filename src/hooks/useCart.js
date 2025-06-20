@@ -27,7 +27,7 @@ const useCart = () => {
     }
   };
 
-  // Inside useCart()
+  //
   const removeFromCart = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
