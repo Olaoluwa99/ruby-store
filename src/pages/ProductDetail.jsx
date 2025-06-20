@@ -66,7 +66,7 @@ const ProductDetail = () => {
             disabled={quantity < 1}
             onClick={() => {
               addToCart(product, quantity);
-              alert(`${product.title} (x${quantity}) added to cart ✅`);
+              alert(`${product.title} (x${quantity}) added to cart`);
             }}
             className={`w-full py-3 rounded-full font-semibold text-[#F6EFEE] transition ${
               quantity < 1

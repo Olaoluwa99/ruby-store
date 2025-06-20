@@ -17,7 +17,7 @@ const Cart = () => {
           Your cart is empty 🛒
         </h2>
         <Link
-          to="/"
+          to="/products"
           className="text-[theme(colors.primaryLight)] underline font-medium"
         >
           Go shopping

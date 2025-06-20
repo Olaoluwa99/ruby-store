@@ -13,9 +13,9 @@ const Checkout = () => {
       return;
     }
 
-    clearCart(); // Clear cart state and storage
-    alert("✅ Checkout successful!");
-    navigate("/"); // Redirect to homepage
+    clearCart();
+    alert("Checkout successful. Thanks for buying!");
+    navigate("/");
   };
 
   return (
