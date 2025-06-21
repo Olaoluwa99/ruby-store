@@ -22,7 +22,9 @@ const useVoiceCommand = (onCommandRecognized) => {
       console.log("Voice command:", transcript);
       if (
         transcript.includes("screenshot") ||
-        transcript.includes("take shot")
+        transcript.includes("take screenshot") ||
+        transcript.includes("take shot") ||
+        transcript.includes("ruby")
       ) {
         onCommandRecognized();
       }
